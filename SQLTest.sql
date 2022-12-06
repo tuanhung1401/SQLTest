@@ -1,5 +1,9 @@
 CREATE DATABASE sql_test;
 
+
+-- ==============================================================
+-- Ex1--
+
 CREATE TABLE categories (
 	id BIGINT PRIMARY KEY AUTO_INCREMENT,
 	category_code VARCHAR(50) NOT NULL,
@@ -112,6 +116,13 @@ SELECT paid_date,COUNT(*) AS 'Number of Orders'
 FROM orders
 GROUP BY paid_date
 
+-- ==============================================================
+
+
+
+
+-- Ex2--
+
 CREATE TABLE employees (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	NAME VARCHAR(50),
@@ -131,6 +142,13 @@ FROM employees a JOIN employees b
 ON (a.managerId = b.Id)
 WHERE a.salary > b.salary;
 
+-- ==============================================================
+
+
+
+
+-- Ex3--
+
 CREATE TABLE person (
 	id INT PRIMARY key AUTO_INCREMENT,
 	email VARCHAR(50)
@@ -146,7 +164,12 @@ SELECT email
 FROM person
 GROUP BY email
 HAVING COUNT(*) > 1
+-- ==============================================================
 
+
+
+
+-- Ex4--
 CREATE TABLE customers (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	NAME VARCHAR(50));
